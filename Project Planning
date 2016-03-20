@@ -1,0 +1,57 @@
+
+# Planning the application 
+# ProjectDiarium / Picojournal - MINIMAL EDITION
+
+	1. Answer Questions
+		- What are we building?
+		- Who are we building it for?
+		- What features do we need to have?
+	2. User stories
+	3. Model our date
+	4. Think through the pages we need in our app
+
+
+## Questions
+
+	1. What are we building? We are building a diary/microblogging app, where we can post a small blog once a day about the most interesting things that occured and are able to quickly retain memories of past days.
+	
+	2.Who are we building it for? Basically everyone who is interested in remembering their life and build up a database of memories.
+
+	3. What feature do we want to have?
+
+#User stories
+
+	-As a user I want to be able to write a small post about my day, so that I can look at it in the future.
+
+	-As a user I want to be able to rate days, so that I can easily find my best days and as a side effect strive for bettering my 		days.
+
+	-As a user I want to add a picture to that day, so that I can remember that day easier.
+
+	-As a user I want to be able to edit and delete my posts, so that I can correct mistakes.
+
+	-As a user I want to be able to create an account, so that only I can see my sensitive data about my days.
+
+	-As a user I want to see a random post from my past, so that I get some memories from the past.
+
+	-As a user I want to know if I am missing a post, so that I can fill it in as soon as possible.
+
+
+##Modeling our data
+
+	**Post**
+		date:date
+		picture:string
+		content:string
+		rating:integer
+
+	**User**
+		Done by Devise
+
+##Think through the pages we need in our app
+
+	-Landing page	:Get users to sign up
+	-User Home	:Show user profile, prompt current day's post, and show random post from the past
+	-Posts#index
+	-about
+
+	
