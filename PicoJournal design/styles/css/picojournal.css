@@ -1,0 +1,171 @@
+.seller-text {
+  padding-bottom: 100px; }
+
+.image-bg-fluid-height {
+  position: relative;
+  border-bottom: 3px solid #c03546; }
+  .image-bg-fluid-height:after {
+    content: " ";
+    bottom: -30px;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    position: absolute;
+    border-width: 30px 25px 0 25px;
+    border-color: #c03546 transparent transparent transparent; }
+
+* {
+  padding: 0;
+  margin: 0; }
+
+::selection {
+  background: #f6ea8c; }
+
+header {
+  min-height: 80vh; }
+
+body {
+  margin: 0; }
+
+h1, h2, h3, h4, h6, .brand, .btn, button, input {
+  font-family: "Nixie One", Georgia, serif;
+  font-weight: 600; }
+
+nav {
+  z-index: 100; }
+
+header {
+  z-index: 0; }
+
+p, li, a {
+  font-family: "Ledger", Garamond, Georgia, serif; }
+
+h1, .brand {
+  font-weight: 600; }
+
+p {
+  font-weight: 400 16px; }
+
+.navbar {
+  background-color: white;
+  height: 100px;
+  margin-bottom: 0;
+  border: 0;
+  border-radius: 0;
+  border-bottom: 3px solid #492540;
+  padding: 20px; }
+  @media screen and (max-width: 768px) {
+    .navbar {
+      padding: 0;
+      height: auto; } }
+
+.navbar-brand {
+  font-size: 2em; }
+  @media screen and (max-width: 768px) {
+    .navbar-brand {
+      font-size: 1.6em;
+      margin-right: 0; } }
+
+.navbar-nav {
+  background-color: white;
+  font-size: 1.2em; }
+  .navbar-nav li {
+    margin-right: 15px; }
+    .navbar-nav li a {
+      color: #4E4F4B !important;
+      margin-top: 4px;
+      transition: margin-top 0.2s, border-bottom 0.2s; }
+      .navbar-nav li a:hover {
+        margin-top: 0px;
+        color: #f26d5b !important;
+        border-bottom: 3px solid #492540; }
+
+@media screen and (max-width: 768px) {
+  .navbar-nav {
+    margin: 0;
+    margin-bottom: 15px;
+    background-color: white; }
+    .navbar-nav li {
+      border: none; }
+      .navbar-nav li a {
+        margin-top: inherit;
+        transition: none;
+        border-bottom: 1px solid #492540; }
+        .navbar-nav li a:hover {
+          margin-top: inherit;
+          color: #010101;
+          border-bottom: 1px solid #c03546; } }
+
+.navbar-inverse .navbar-nav > .open > a, .navbar-inverse .navbar-nav > .open > a:focus, .navbar-inverse .navbar-nav > .open > a:hover {
+  background-color: #efefef; }
+
+.navbar-toggle {
+  background-color: #c03546; }
+
+.dropdown-toggle {
+  background-color: #efefef; }
+
+.nav li {
+  border: none; }
+
+.nav .open > a, .nav .open > a:focus, .nav .open > a:hover {
+  border-color: #492540; }
+
+.open > a {
+  border-bottom: 3px solid #492540; }
+
+.dropdown-menu > li > a:hover {
+  background-color: white;
+  border: none; }
+
+.logged-in-nav li a {
+  transition: border-bottom 0.2s;
+  margin: 0; }
+
+.user {
+  border-bottom: 3px solid #492540; }
+
+.brand {
+  margin-right: 30px;
+  color: #c03546 !important;
+  line-height: 0.8em;
+  border-left: 3px solid #492540;
+  font-weight: 600; }
+  @media screen and (max-width: 768px) {
+    .brand {
+      border-left: none;
+      margin-right: 0; } }
+  .brand .pico {
+    color: #c03546; }
+  .brand .journal {
+    color: #4E4F4B; }
+
+.my-btn {
+  font-weight: 600;
+  height: 70px;
+  background-color: rgba(239, 239, 239, 0.15);
+  border-radius: 5px;
+  border-color: #4E4F4B;
+  font-size: 2.5em; }
+  .my-btn:hover {
+    background-color: #c03546; }
+
+.more-btn {
+  vertical-align: middle;
+  font-size: 1.75em; }
+  .more-btn:hover {
+    background-color: rgba(239, 239, 239, 0.8); }
+
+.signup-btn {
+  margin-bottom: 10px;
+  background-color: rgba(192, 53, 70, 0.8); }
+
+.active {
+  border-bottom: 3px solid #492540; }
+
+.site-wrap {
+  background-color: #efefef;
+  margin: 0 auto; }
+
+/*# sourceMappingURL=picojournal.css.map */

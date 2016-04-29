@@ -1,0 +1,165 @@
+@import 'variables'
+@import 'landingpage'
+
+*
+  padding: 0
+  margin: 0
+
+::selection
+  background: $yellow
+
+header
+  min-height: 80vh
+
+body
+  margin: 0
+
+h1,h2,h3,h4,h6,.brand, .btn, button, input
+  font-family: 'Nixie One', Georgia, serif
+  font-weight: 600
+
+nav
+  z-index: 100
+
+header
+  z-index: 0
+
+p, li, a
+  font-family: 'Ledger', Garamond, Georgia, serif
+
+h1, .brand
+  font-weight: 600
+
+p
+  font-weight: 400 16px
+
+//////////////////////////////////////////////////////////////////////
+//OVERRIDING BOOTSTRAP WHOOO #########################################
+//////////////////////////////////////////////////////////////////////
+
+.navbar
+  background-color: white
+  height: 100px
+  margin-bottom: 0
+  border: 0
+  border-radius: 0
+  border-bottom: 3px solid $purple
+  padding: 20px
+  @media screen and (max-width: $break-small)
+    padding: 0
+    height: auto
+
+.navbar-brand
+  font-size: 2em
+  @media screen and (max-width: $break-small)
+    font-size: 1.6em
+    margin-right: 0
+
+.navbar-nav
+  background-color: white
+  font-size: 1.2em
+  li
+    margin-right: 15px
+    a
+      color: $dark !important
+      margin-top: 4px
+      transition: margin-top 0.2s, border-bottom 0.2s
+      &:hover
+        margin-top: 0px
+        color: $orange !important
+        border-bottom: 3px solid $purple
+
+.navbar-nav
+  @media screen and (max-width: $break-small)
+    margin: 0
+    margin-bottom: 15px
+    background-color: white
+    li
+      border: none
+      a
+        margin-top: inherit
+        transition: none
+        border-bottom: 1px solid $purple
+        &:hover
+          margin-top: inherit
+          color: $black
+          border-bottom: 1px solid $red
+
+.navbar-inverse .navbar-nav>.open>a, .navbar-inverse .navbar-nav>.open>a:focus, .navbar-inverse .navbar-nav>.open>a:hover
+  background-color: $white
+
+.navbar-toggle
+  background-color: $red
+
+.dropdown-toggle
+  background-color: $white
+
+.nav
+  li
+    border: none
+
+
+.nav .open>a, .nav .open>a:focus, .nav .open>a:hover
+  border-color: $purple
+
+.open>a
+  border-bottom: 3px solid $purple
+
+.dropdown-menu>li>a:hover
+  background-color: white
+  border: none
+
+//!END OVERRIDE BOOTSTRAP
+/////////////////////////
+.logged-in-nav
+  li
+    a
+      transition: border-bottom 0.2s
+      margin: 0
+
+.user
+  border-bottom: 3px solid $purple
+
+
+.brand
+  margin-right: 30px
+  color: $red !important
+  line-height: 0.8em
+  border-left: 3px solid $purple
+  font-weight: 600
+  @media screen and (max-width: $break-small)
+    border-left: none
+    margin-right: 0
+  .pico
+    color: $red
+
+  .journal
+    color: $dark
+
+
+.my-btn
+  font-weight: 600
+  height: 70px
+  background-color: rgba($white, 0.15)
+  border-radius: 5px
+  border-color: $dark
+  font-size: 2.5em
+  &:hover
+    background-color: $red
+
+.more-btn
+  vertical-align: middle
+  font-size: 1.75em
+  &:hover
+    background-color: rgba($white, 0.8)
+
+.signup-btn
+  margin-bottom: 10px
+  background-color: rgba($red, 0.8)
+
+.active
+  border-bottom: 3px solid $purple
+
+.site-wrap
+  background-color: $white
+  margin: 0 auto

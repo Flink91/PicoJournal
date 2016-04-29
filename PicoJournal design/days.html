@@ -9,27 +9,28 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Full Width Pics - Start Bootstrap Template</title>
+  <title>PicoJournal</title>
 
   <!-- Bootstrap Core CSS -->
-  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="styles/frameworks/bootstrap.min.css" rel="stylesheet">
 
   <!-- fonts-->
   <link href="http://fonts.googleapis.com/css?family=Nixie+One" rel="stylesheet" type="text/css">
   <link href="http://fonts.googleapis.com/css?family=Ledger" rel="stylesheet" type="text/css">
 
   <!-- Custom CSS -->
-  <link href="css/full-width-pics.css" rel="stylesheet">
-  <link href="css/timeline.css" rel="stylesheet">
+  <link href="styles/css/full-width-pics.css" rel="stylesheet">
   <!--custom SASS-->
-  <link rel="stylesheet" href="css/picojournal.css">
+  <link rel="stylesheet" href="styles/css/picojournal.css">
+  <!--custom scss...gotta catch them all-->
+  <link href="styles/css/timeline.css" rel="stylesheet">
 
 </head>
 
 <body>
 
   <!-- Navigation -->
-  <nav class="navbar navbar-inverse navbar-top my-nav" role="navigation">
+  <nav class="navbar navbar-inverse navbar-top my-nav logged-in-nav" role="navigation">
     <div class="container">
       <!-- Brand and toggle get grouped for better mobile display -->
       <div class="navbar-header">
@@ -39,7 +40,7 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand brand" href="index.html">Pico<span>Journal</span></a>
+        <a class="navbar-brand brand" href="index.html"><span class="pico">Pico</span><span class="journal">Journal</span></a>
       </div>
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -57,17 +58,17 @@
             <a href="about.html">About</a>
           </li>
         </ul>
-          <ul class="nav navbar-nav navbar-right">
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-user"></span> Flink</a>
-              <ul class="dropdown-menu">
-                <li><a href="#">Settings</a></li>
-                <li><a href="#">Go Premium</a></li>
-                <li role="separator" class="divider"></li>
-                <li><a href="#">Sign out</a></li>
-              </ul>
-            </li>
-          </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-user"></span> Flink</a>
+            <ul class="dropdown-menu">
+              <li><a href="#">Settings</a></li>
+              <li><a href="#">Go Premium</a></li>
+              <li role="separator" class="divider"></li>
+              <li><a href="#">Sign out</a></li>
+            </ul>
+          </li>
+        </ul>
       </div>
       <!-- /.navbar-collapse -->
     </div>
@@ -81,6 +82,9 @@
     <section>
       <div class="container">
         <div class="row">
+          <div class="col-lg-12">
+            <h2 style="text-align:center;">December 2019</h2>
+          </div>
         </div>
       </div>
     </section>
@@ -95,6 +99,55 @@
             <ul class="timeline">
 
               <li class="timeline-start">
+                <div class="timeline-badge">
+                  <span class="timeline-balloon-date-day">29</span>
+                  <span class="timeline-balloon-date-month">Dec</span>
+                </div>
+                <div class="timeline-panel">
+
+                  <div class="timeline-body">
+                    <div class="timeline-left">
+
+                      <img class="day-img" src="img/tag.jpg" alt="">
+                    </div>
+                    <div class="timeline-content">
+                      <form class="new-day-form">
+                        <p class="day-text">
+                          <textarea style="resize:none;" class="form-control" id="exampleTextarea" rows="3" placeholder="What was the most interesting thing today?"></textarea>
+                        </p>
+                        <div class="row" style="height:40px;">
+                          <div class="col-lg-4">
+                            <label class="file">
+                              <input type="file" id="file">
+                              <span class="file-custom"></span>
+                            </label>
+                          </div>
+                          <div class="col-lg-4">
+                            <p class="day-short-rating">
+                              <select style="font-size: 0.8em;" id="exampleSelect1">
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                                <option>6</option>
+                                <option>7</option>
+                                <option>8</option>
+                                <option>9</option>
+                                <option>10</option>
+                              </select><span class="glyphicon glyphicon-star single-star"></span></p>
+                          </div>
+                        </div>
+                        <div class="form-group row">
+                          <button type="submit" class="btn btn-primary center-block ">Remember</button>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </li>
+
+              <li>
                 <div class="timeline-badge">
                   <span class="timeline-balloon-date-day">27</span>
                   <span class="timeline-balloon-date-month">Dec</span>

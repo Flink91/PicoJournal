@@ -9,27 +9,28 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Full Width Pics - Start Bootstrap Template</title>
+  <title>PicoJournal</title>
 
   <!-- Bootstrap Core CSS -->
-  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="styles/frameworks/bootstrap.min.css" rel="stylesheet">
 
   <!-- fonts-->
   <link href="http://fonts.googleapis.com/css?family=Nixie+One" rel="stylesheet" type="text/css">
   <link href="http://fonts.googleapis.com/css?family=Ledger" rel="stylesheet" type="text/css">
 
   <!-- Custom CSS -->
-  <link href="css/full-width-pics.css" rel="stylesheet">
-  <link href="css/timeline.css" rel="stylesheet">
+  <link href="styles/css/full-width-pics.css" rel="stylesheet">
   <!--custom SASS-->
-  <link rel="stylesheet" href="css/picojournal.css">
+  <link rel="stylesheet" href="styles/css/picojournal.css">
+  <!--custom scss...gotta catch them all-->
+  <link href="styles/css/timeline.css" rel="stylesheet">
 
 </head>
 
 <body>
 
   <!-- Navigation -->
-  <nav class="navbar navbar-inverse navbar-top my-nav" role="navigation">
+  <nav class="navbar navbar-inverse navbar-top my-nav logged-in-nav" role="navigation">
     <div class="container">
       <!-- Brand and toggle get grouped for better mobile display -->
       <div class="navbar-header">
@@ -39,7 +40,7 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand brand" href="index.html">Pico<span>Journal</span></a>
+        <a class="navbar-brand brand" href="index.html"><span class="pico">Pico</span><span class="journal">Journal</span></a>
       </div>
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -63,7 +64,6 @@
             <ul class="dropdown-menu">
               <li><a href="#">Settings</a></li>
               <li><a href="#">Go Premium</a></li>
-              <li role="separator" class="divider"></li>
               <li><a href="#">Sign out</a></li>
             </ul>
           </li>
@@ -82,7 +82,8 @@
       <div class="container">
         <div class="row">
           <div class="col-md-12">
-            <h2> You have missed (3) day entries! Fill them in now</h2>
+            <h2>Hi Flink, welcome back!</h2>
+            <h3> You have missed (3) day entries! Fill them in now</h3>
           </div>
 
 

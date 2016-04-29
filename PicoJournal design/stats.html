@@ -9,27 +9,27 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Full Width Pics - Start Bootstrap Template</title>
+  <title>PicoJournal</title>
 
   <!-- Bootstrap Core CSS -->
-  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="styles/frameworks/bootstrap.min.css" rel="stylesheet">
+
 
   <!-- fonts-->
   <link href="http://fonts.googleapis.com/css?family=Nixie+One" rel="stylesheet" type="text/css">
   <link href="http://fonts.googleapis.com/css?family=Ledger" rel="stylesheet" type="text/css">
 
   <!-- Custom CSS -->
-  <link href="css/full-width-pics.css" rel="stylesheet">
-  <link href="css/timeline.css" rel="stylesheet">
+  <link href="styles/css/full-width-pics.css" rel="stylesheet">
   <!--custom SASS-->
-  <link rel="stylesheet" href="css/picojournal.css">
+  <link rel="stylesheet" href="styles/css/picojournal.css">
 
 </head>
 
 <body>
 
   <!-- Navigation -->
-  <nav class="navbar navbar-inverse navbar-top my-nav" role="navigation">
+  <nav class="navbar navbar-inverse navbar-top my-nav logged-in-nav" role="navigation">
     <div class="container">
       <!-- Brand and toggle get grouped for better mobile display -->
       <div class="navbar-header">
@@ -39,7 +39,7 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand brand" href="index.html">Pico<span>Journal</span></a>
+        <a class="navbar-brand brand" href="index.html"><span class="pico">Pico</span><span class="journal">Journal</span></a>
       </div>
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -85,13 +85,139 @@
             <h1>Stats</h1>
             <p>Brunch tilde readymade, chia forage shabby chic bushwick biodiesel affogato waistcoat tattooed DIY truffaut. Pork belly cold-pressed kinfolk, readymade gastropub skateboard cornhole gochujang butcher marfa raw denim neutra fanny pack pinterest.</p>
             <img src="img/graph.png" alt="graph"><img src="img/graph.png" alt="graph">
-            <p>
-              Sustainable kombucha biodiesel tattooed chia squid. Artisan trust fund mlkshk fixie. Paleo neutra knausgaard man bun, cornhole shoreditch vegan narwhal post-ironic chia. Art party sriracha keytar, kogi pitchfork actually pug franzen pickled
-              vinyl williamsburg jean shorts cray farm-to-table. Gluten-free fingerstache disrupt, +1 pop-up try-hard plaid pitchfork before they sold out man bun microdosing pug distillery semiotics. Skateboard pitchfork listicle single-origin coffee
-              small batch. Drinking vinegar vinyl asymmetrical blog flannel, locavore dreamcatcher 3 wolf moon. Banh mi chia hella kale chips. Mlkshk helvetica keffiyeh literally. Ugh lumbersexual gastropub aesthetic schlitz, tilde DIY man braid shoreditch
-              you probably haven't heard of them squid truffaut franzen irony. Craft beer blog microdosing everyday carry. Leggings gentrify pickled wolf jean shorts butcher tumblr, put a bird on it health goth. Scenester VHS tote bag, pug mixtape pork
-              belly williamsburg fanny pack biodiesel. Dreamcatcher gentrify wolf, bespoke pop-up seitan meggings. Cray kogi gluten-free locavore. Helvetica meditation plaid keffiyeh stumptown beard cardigan skateboard. Umami kale chips vice man braid
-              keytar microdosing portland gochujang bespoke cray butcher jean shorts yr. Pork belly scenester swag man braid. Lo-fi church-key banjo readymade, poutine austin farm-to-table schlitz hella thundercats pug locavore.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <div id="container" style="width: 75%;">
+                <canvas id="canvas"></canvas>
+            </div>
+            <button id="randomizeData">Randomize Data</button>
+            <button id="addDataset">Add Dataset</button>
+            <button id="removeDataset">Remove Dataset</button>
+            <button id="addData">Add Data</button>
+            <button id="removeData">Remove Data</button>
+            <script>
+                var MONTHS = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+
+                var randomScalingFactor = function() {
+                    return (Math.random() > 0.5 ? 1.0 : -1.0) * Math.round(Math.random() * 100);
+                };
+                var randomColorFactor = function() {
+                    return Math.round(Math.random() * 255);
+                };
+                var randomColor = function() {
+                    return 'rgba(' + randomColorFactor() + ',' + randomColorFactor() + ',' + randomColorFactor() + ',.7)';
+                };
+
+                var barChartData = {
+                    labels: ["January", "February", "March", "April", "May", "June", "July"],
+                    datasets: [{
+                        label: 'Dataset 1',
+                        backgroundColor: "rgba(220,220,220,0.5)",
+                        data: [randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor()]
+                    }, {
+                        hidden: true,
+                        label: 'Dataset 2',
+                        backgroundColor: "rgba(151,187,205,0.5)",
+                        data: [randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor()]
+                    }, {
+                        label: 'Dataset 3',
+                        backgroundColor: "rgba(151,187,205,0.5)",
+                        data: [randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor()]
+                    }]
+
+                };
+
+                window.onload = function() {
+                    var ctx = document.getElementById("canvas").getContext("2d");
+                    window.myBar = new Chart(ctx, {
+                        type: 'bar',
+                        data: barChartData,
+                        options: {
+                            // Elements options apply to all of the options unless overridden in a dataset
+                            // In this case, we are setting the border of each bar to be 2px wide and green
+                            elements: {
+                                rectangle: {
+                                    borderWidth: 2,
+                                    borderColor: 'rgb(0, 255, 0)',
+                                    borderSkipped: 'bottom'
+                                }
+                            },
+                            responsive: true,
+                            legend: {
+                                position: 'top',
+                            },
+                            title: {
+                                display: true,
+                                text: 'Chart.js Bar Chart'
+                            }
+                        }
+                    });
+
+                };
+
+                $('#randomizeData').click(function() {
+                    var zero = Math.random() < 0.2 ? true : false;
+                    $.each(barChartData.datasets, function(i, dataset) {
+                        dataset.backgroundColor = randomColor();
+                        dataset.data = dataset.data.map(function() {
+                            return zero ? 0.0 : randomScalingFactor();
+                        });
+
+                    });
+                    window.myBar.update();
+                });
+
+                $('#addDataset').click(function() {
+                    var newDataset = {
+                        label: 'Dataset ' + barChartData.datasets.length,
+                        backgroundColor: randomColor(),
+                        data: []
+                    };
+
+                    for (var index = 0; index < barChartData.labels.length; ++index) {
+                        newDataset.data.push(randomScalingFactor());
+                    }
+
+                    barChartData.datasets.push(newDataset);
+                    window.myBar.update();
+                });
+
+                $('#addData').click(function() {
+                    if (barChartData.datasets.length > 0) {
+                        var month = MONTHS[barChartData.labels.length % MONTHS.length];
+                        barChartData.labels.push(month);
+
+                        for (var index = 0; index < barChartData.datasets.length; ++index) {
+                            //window.myBar.addData(randomScalingFactor(), index);
+                            barChartData.datasets[index].data.push(randomScalingFactor());
+                        }
+
+                        window.myBar.update();
+                    }
+                });
+
+                $('#removeDataset').click(function() {
+                    barChartData.datasets.splice(0, 1);
+                    window.myBar.update();
+                });
+
+                $('#removeData').click(function() {
+                    barChartData.labels.splice(-1, 1); // remove the label first
+
+                    barChartData.datasets.forEach(function(dataset, datasetIndex) {
+                        dataset.data.pop();
+                    });
+
+                    window.myBar.update();
+                });
+            </script>
           </div>
         </div>
       </div>
@@ -116,6 +242,8 @@
 
     <!-- jQuery -->
   <script src="js/jquery.js"></script>
+  <!--charts.js-->
+  <script src="js/Chart.bundle.js"></script>
 
   <!-- Bootstrap Core JavaScript -->
   <script src="js/bootstrap.min.js"></script>
