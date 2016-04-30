@@ -1,6 +1,8 @@
 == README
 
 Starting a new project in Rails. Trying to make a kind of diary type webapp.
+Right now it's not much.
+
 
 Things you may want to cover:
 
