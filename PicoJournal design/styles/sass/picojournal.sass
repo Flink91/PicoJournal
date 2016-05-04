@@ -31,7 +31,12 @@ h1, .brand
   font-weight: 600
 
 p
-  font-weight: 400 16px
+  font-weight: 400
+  font-size: 1.2em
+
+footer
+  margin-top: 25px
+  padding: 5px
 
 //////////////////////////////////////////////////////////////////////
 //OVERRIDING BOOTSTRAP WHOOO #########################################
@@ -136,7 +141,6 @@ p
   .journal
     color: $dark
 
-
 .my-btn
   font-weight: 600
   height: 70px
@@ -162,4 +166,37 @@ p
 
 .site-wrap
   background-color: $white
+  max-width: 1200px
   margin: 0 auto
+
+////////////////////////////////
+//HOME PAGE //
+////////////////////////////////
+
+.home-top
+  background-color: $red
+  padding-bottom: 100px
+
+.profile-section
+  padding: 0
+  .row
+
+.profile-img
+  margin: 0 auto
+  margin-top: -80px
+  margin-left: 50px
+  float: left
+
+.single-day-section
+  .timeline::before
+    bottom: 136px
+  .timeline-end
+    height: 28px
+    top: -124px
+    transition: background-color 0.2s, top 0.25s
+    &:hover
+      background-color: darken($red, 10%)
+    &:active
+      top: -105px
+  .timeline > li > .timeline-badge
+    top: 50px
