@@ -30,9 +30,12 @@ p, li, a
 h1, .brand
   font-weight: 600
 
+h3
+  font-size: 1.6em
+
 p
   font-weight: 400
-  font-size: 1.2em
+  font-size: 1.1em
 
 footer
   margin-top: 25px
@@ -65,6 +68,8 @@ footer
   font-size: 1.2em
   li
     margin-right: 15px
+    @media screen and (max-width: $break-small)
+      margin-right: 0
     a
       color: $dark !important
       margin-top: 4px
@@ -89,6 +94,9 @@ footer
           margin-top: inherit
           color: $black
           border-bottom: 1px solid $red
+
+.dropdown-menu .divider
+  margin: 0
 
 .navbar-inverse .navbar-nav>.open>a, .navbar-inverse .navbar-nav>.open>a:focus, .navbar-inverse .navbar-nav>.open>a:hover
   background-color: $white
@@ -186,6 +194,11 @@ footer
   margin-top: -80px
   margin-left: 50px
   float: left
+  border: 5px solid $white
+  border-radius: 5px
+
+.user-desc
+  float: none
 
 .single-day-section
   .timeline::before
@@ -200,3 +213,58 @@ footer
       top: -105px
   .timeline > li > .timeline-badge
     top: 50px
+    @media screen and (max-width: $break-medium)
+      top: 17px
+
+@media screen and (max-width: $break-tiny)
+  h3
+    margin-top: 7px
+  .timeline
+    width: inherit
+    max-width: 768px
+  .timeline-header
+    margin-bottom: 0
+  .timeline > li > .timeline-panel
+    width: 100%
+  .timeline-body
+    height: inherit
+  .timeline-content
+    width: 100%
+    position: absolute
+    top: 188px
+    text-align: center
+    margin: 0 auto
+    padding: 10px
+    background: rgba(255,255,255,0.2)
+  .single-day-section .timeline-end
+    display: none
+  .timeline > li
+    margin: 0 auto
+    max-width: 382px
+  .timeline > li > .timeline-panel
+    float: none
+    margin-bottom: 20px
+  .timeline > li > .timeline-panel:before
+    display: none
+  .timeline > li > .timeline-panel:after
+    display: none
+  .single-day-section .timeline:before
+    left: 50%
+  .day-img
+    float: none
+    width: 100%
+  .day-text
+    padding: 0
+    font-size: 1.2em
+  .new-day-form
+    top: 100px
+    width: 100%
+    text-align: left
+    .day-short-rating
+      text-align: left
+
+
+@media screen and (max-width: $break-microbic)
+  .profile-img
+    margin-left: 0
+    max
