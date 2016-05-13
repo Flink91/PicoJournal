@@ -55,6 +55,9 @@ footer {
   margin-top: 25px;
   padding: 5px; }
 
+.row {
+  margin: 0; }
+
 .navbar {
   background-color: white;
   height: 100px;
@@ -183,8 +186,11 @@ footer {
   max-width: 1200px;
   margin: 0 auto; }
 
+textarea.form-control {
+  border-radius: 0; }
+
 .home-top {
-  background-color: #c03546;
+  background-color: #f26d5b;
   padding-bottom: 100px; }
 
 .profile-section {
@@ -193,7 +199,6 @@ footer {
 .profile-img {
   margin: 0 auto;
   margin-top: -80px;
-  margin-left: 50px;
   float: left;
   border: 5px solid #efefef;
   border-radius: 5px; }
@@ -212,18 +217,36 @@ footer {
   .single-day-section .timeline-end:active {
     top: -105px; }
 .single-day-section .timeline > li > .timeline-badge {
-  top: 50px; }
+  top: 23px; }
   @media screen and (max-width: 992px) {
     .single-day-section .timeline > li > .timeline-badge {
       top: 17px; } }
+
+.new-day-btn {
+  color: #c03546;
+  margin: 10px 0px 10px 0px;
+  background-color: #efefef;
+  border: 0;
+  border-radius: 0; }
+  .new-day-btn:hover {
+    color: #efefef;
+    background-color: #c03546; }
+
+.day-short-rating {
+  font-size: 16px; }
 
 @media screen and (max-width: 690px) {
   h3 {
     margin-top: 7px; }
 
+  .profile-img {
+    margin-left: 0; }
+
   .timeline {
     width: inherit;
     max-width: 768px; }
+    .timeline::before {
+      left: 50%; }
 
   .timeline-header {
     margin-bottom: 0; }
@@ -237,7 +260,7 @@ footer {
   .timeline-content {
     width: 100%;
     position: absolute;
-    top: 188px;
+    bottom: 0%;
     text-align: center;
     margin: 0 auto;
     padding: 10px;
@@ -270,6 +293,12 @@ footer {
   .day-text {
     padding: 0;
     font-size: 1.2em; }
+
+  .timeline-form {
+    margin: 0;
+    padding: 3px;
+    float: left;
+    display: block; }
 
   .new-day-form {
     top: 100px;
