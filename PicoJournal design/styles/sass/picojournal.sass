@@ -181,6 +181,18 @@ footer
 
 textarea.form-control
   border-radius: 0
+  margin-bottom: 5px
+
+.nopadding
+  padding: 0
+
+.new-day-form
+  .day-text
+    padding: 15px 15px 0px 215px
+  .pic-upload
+    font-size: 1.5rem
+    width: 100%
+
 
 ////////////////////////////////
 //HOME PAGE //
@@ -225,15 +237,24 @@ textarea.form-control
 
 .new-day-btn
   color: $red
-  margin: 10px 0px 10px 0px
   background-color: $white
   border: 0
   border-radius: 0
+  text-align: center
   &:hover
     color: $white
     background-color: $red
+  &:active
+    color: $white
+    background-color: $red
+
 .day-short-rating
   font-size: 16px
+  text-align: center
+
+.day-short-rating-input
+  text-align: left
+  font-size: 0.8em
 
 /////////////////
 //MEDIA QUERIES//
@@ -293,6 +314,8 @@ textarea.form-control
     text-align: left
     .day-short-rating
       text-align: left
+    .day-text
+      padding: 0
 
 
 @media screen and (max-width: $break-microbic)

@@ -187,7 +187,17 @@ footer {
   margin: 0 auto; }
 
 textarea.form-control {
-  border-radius: 0; }
+  border-radius: 0;
+  margin-bottom: 5px; }
+
+.nopadding {
+  padding: 0; }
+
+.new-day-form .day-text {
+  padding: 15px 15px 0px 215px; }
+.new-day-form .pic-upload {
+  font-size: 1.5rem;
+  width: 100%; }
 
 .home-top {
   background-color: #f26d5b;
@@ -224,16 +234,24 @@ textarea.form-control {
 
 .new-day-btn {
   color: #c03546;
-  margin: 10px 0px 10px 0px;
   background-color: #efefef;
   border: 0;
-  border-radius: 0; }
+  border-radius: 0;
+  text-align: center; }
   .new-day-btn:hover {
+    color: #efefef;
+    background-color: #c03546; }
+  .new-day-btn:active {
     color: #efefef;
     background-color: #c03546; }
 
 .day-short-rating {
-  font-size: 16px; }
+  font-size: 16px;
+  text-align: center; }
+
+.day-short-rating-input {
+  text-align: left;
+  font-size: 0.8em; }
 
 @media screen and (max-width: 690px) {
   h3 {
@@ -305,7 +323,9 @@ textarea.form-control {
     width: 100%;
     text-align: left; }
     .new-day-form .day-short-rating {
-      text-align: left; } }
+      text-align: left; }
+    .new-day-form .day-text {
+      padding: 0; } }
 @media screen and (max-width: 400px) {
   .profile-img {
     margin-left: 0; } }

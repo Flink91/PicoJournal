@@ -114,31 +114,33 @@
                     </div>
                     <div class="timeline-content timeline-form">
                       <form class="new-day-form">
-                        <p class="day-text">
+                        <div class="day-text">
                           <textarea style="resize:none;" class="form-control" id="exampleTextarea" rows="3" placeholder="What was the most interesting thing today?"></textarea>
-                        </p>
-                        <div class="row" style="height:40px;">
-                          <div class="col-lg-4 col-sm-4 ">
-                            <label class="file">
-                              <input type="file" id="file">
-                              <span class="file-custom"></span>
-                            </label>
+
+                          <div class="row" style="height:40px;">
+                            <div class="col-lg-4 pic-upload nopadding">
+                              <label class="file">
+                                <input type="file" id="file">
+                                <span class="file-custom"></span>
+                              </label>
+                            </div>
+                            <div class="col-lg-4 col-xs-12 nopadding">
+                              <p class="day-short-rating-input">Rate day:
+                                <select style="font-size: 0.8em;" id="exampleSelect1">
+                                  <option>(1) terrible</option>
+                                  <option>(2) bad</option>
+                                  <option>(3) average</option>
+                                  <option>(4) pretty good</option>
+                                  <option>(5) great</option>
+                                  <option>(6) the best</option>
+                                </select><span class="glyphicon glyphicon-star single-star"></span></p>
+                            </div>
                           </div>
-                          <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                            <p class="day-short-rating">Rate day:
-                              <select style="font-size: 0.8em;" id="exampleSelect1">
-                                <option>terrible</option>
-                                <option>bad</option>
-                                <option>average</option>
-                                <option>pretty good</option>
-                                <option>great</option>
-                                <option>the best</option>
-                              </select><span class="glyphicon glyphicon-star single-star"></span></p>
-                          </div>
-                        </div>
-                        <div class="form-group row">
-                          <div class="col-md-4 col-lg-4 col-sm-4 col-xs-12">
-                            <button type="submit" class="btn btn-primary new-day-btn">Remember</button>
+
+                          <div class="form-group row">
+                            <div class="col-md-4 col-lg-4 col-sm-4 col-xs-12 nopadding">
+                              <button type="submit" class="btn btn-primary new-day-btn">Remember</button>
+                            </div>
                           </div>
                         </div>
                       </form>
