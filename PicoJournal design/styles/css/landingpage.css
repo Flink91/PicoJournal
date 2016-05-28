@@ -12,7 +12,22 @@
     height: 0;
     border-style: solid;
     position: absolute;
+    margin-left: -25px;
     border-width: 30px 25px 0 25px;
     border-color: #c03546 transparent transparent transparent; }
+
+.img-promo {
+  margin: 0 auto;
+  display: block; }
+
+#welcome-section {
+  margin-top: 25px; }
+
+#more-section {
+  background-color: #efefef; }
+
+#convinced-section {
+  background-color: #492540;
+  color: #efefef; }
 
 /*# sourceMappingURL=landingpage.css.map */

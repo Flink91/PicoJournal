@@ -12,8 +12,23 @@
     height: 0;
     border-style: solid;
     position: absolute;
+    margin-left: -25px;
     border-width: 30px 25px 0 25px;
     border-color: #c03546 transparent transparent transparent; }
+
+.img-promo {
+  margin: 0 auto;
+  display: block; }
+
+#welcome-section {
+  margin-top: 25px; }
+
+#more-section {
+  background-color: #efefef; }
+
+#convinced-section {
+  background-color: #492540;
+  color: #efefef; }
 
 * {
   padding: 0;
@@ -52,8 +67,10 @@ p {
   font-size: 1.1em; }
 
 footer {
-  margin-top: 25px;
-  padding: 5px; }
+  padding: 15px;
+  padding-top: 25px;
+  background-color: #efefef;
+  color: #4E4F4B; }
 
 .row {
   margin: 0; }
@@ -161,9 +178,9 @@ footer {
 .my-btn {
   font-weight: 600;
   height: 70px;
-  background-color: rgba(239, 239, 239, 0.15);
+  background-color: #efefef;
   border-radius: 5px;
-  border-color: #4E4F4B;
+  border-color: #efefef;
   font-size: 2.5em; }
   .my-btn:hover {
     background-color: #c03546; }
@@ -172,11 +189,13 @@ footer {
   vertical-align: middle;
   font-size: 1.75em; }
   .more-btn:hover {
-    background-color: rgba(239, 239, 239, 0.8); }
+    background-color: #efefef; }
 
 .signup-btn {
   margin-bottom: 10px;
-  background-color: rgba(192, 53, 70, 0.8); }
+  color: #efefef;
+  background-color: #c03546;
+  border-color: #c03546; }
 
 .active {
   border-bottom: 3px solid #492540; }
@@ -199,9 +218,19 @@ textarea.form-control {
   font-size: 1.5rem;
   width: 100%; }
 
+#days-title-section {
+  padding: 55px 0px 0px 0px; }
+
 .home-top {
-  background-color: #f26d5b;
+  background-color: #f6ea8c;
   padding-bottom: 100px; }
+
+.other-months {
+  text-align: center;
+  margin: 0 auto;
+  float: left;
+  width: 100%;
+  color: #4E4F4B; }
 
 .profile-section {
   padding: 0; }
@@ -282,7 +311,7 @@ textarea.form-control {
     text-align: center;
     margin: 0 auto;
     padding: 10px;
-    background: rgba(255, 255, 255, 0.2); }
+    background: rgba(255, 255, 255, 0.8); }
 
   .single-day-section .timeline-end {
     display: none; }
@@ -306,7 +335,9 @@ textarea.form-control {
 
   .day-img {
     float: none;
-    width: 100%; }
+    width: 100%;
+    -webkit-filter: blur(0px) brightness(1.1) contrast(1.02);
+    filter: blur(0px) brightness(1.1) contrast(1.02); }
 
   .day-text {
     padding: 0;

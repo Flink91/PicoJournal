@@ -38,8 +38,10 @@ p
   font-size: 1.1em
 
 footer
-  margin-top: 25px
-  padding: 5px
+  padding: 15px
+  padding-top: 25px
+  background-color: $white
+  color: $dark
 
 //////////////////////////////////////////////////////////////////////
 //OVERRIDING BOOTSTRAP WHOOO #########################################
@@ -154,9 +156,9 @@ footer
 .my-btn
   font-weight: 600
   height: 70px
-  background-color: rgba($white, 0.15)
+  background-color: $white
   border-radius: 5px
-  border-color: $dark
+  border-color: $white
   font-size: 2.5em
   &:hover
     background-color: $red
@@ -165,11 +167,13 @@ footer
   vertical-align: middle
   font-size: 1.75em
   &:hover
-    background-color: rgba($white, 0.8)
+    background-color: $white
 
 .signup-btn
   margin-bottom: 10px
-  background-color: rgba($red, 0.8)
+  color: $white
+  background-color: $red
+  border-color: $red
 
 .active
   border-bottom: 3px solid $purple
@@ -198,9 +202,19 @@ textarea.form-control
 //HOME PAGE //
 ////////////////////////////////
 
+#days-title-section
+  padding: 55px 0px 0px 0px
+
 .home-top
-  background-color: $orange
+  background-color: $yellow
   padding-bottom: 100px
+
+.other-months
+  text-align: center
+  margin: 0 auto
+  float: left
+  width: 100%
+  color: $dark
 
 .profile-section
   padding: 0
@@ -282,7 +296,7 @@ textarea.form-control
     text-align: center
     margin: 0 auto
     padding: 10px
-    background: rgba(255,255,255,0.2)
+    background: rgba(255,255,255,0.8)
   .single-day-section .timeline-end
     display: none
   .timeline > li
@@ -300,6 +314,8 @@ textarea.form-control
   .day-img
     float: none
     width: 100%
+    -webkit-filter: blur(0px) brightness(1.1) contrast(1.02)
+    filter: blur(0px) brightness(1.1) contrast(1.02)
   .day-text
     padding: 0
     font-size: 1.2em
