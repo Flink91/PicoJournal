@@ -9,18 +9,19 @@
   <meta name="author" content="Felix Gellner">
 
   <title>PicoJournal</title>
-  <link rel="icon" type="image/png" href="img/favicon-16x16.png" />
+  <%= favicon_link_tag("favicon-16x16.png") %>
 
   <!-- Bootstrap Core CSS -->
-  <link href="styles/frameworks/bootstrap.min.css" rel="stylesheet">
+  <%= stylesheet_link_tag("bootstrap.min.css") %>
 
   <!-- fonts-->
-  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Nixie+One">
-  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Ledger">
+  <%= stylesheet_link_tag('application', 'http://fonts.googleapis.com/css?family=Nixie+One', media:'all', 'data-turbolinks-track' => true) %>
+  <%= stylesheet_link_tag('application', 'http://fonts.googleapis.com/css?family=Ledger', media:'all', 'data-turbolinks-track' => true) %>
+
   <!-- Custom CSS -->
-  <link rel="stylesheet" href="styles/css/full-width-pics.css">
+  <%= stylesheet_link_tag("full-width-pics.css") %>
   <!--compiled SASS-->
-  <link rel="stylesheet" href="styles/css/picojournal.css">
+  <%= stylesheet_link_tag("picojournal.css") %>
 
 </head>
 
@@ -42,7 +43,9 @@
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav navbar-right">
-          <li><a href="home.html">Log in</a></li>
+          <li><%= link_to 'Login', new_user_session_path %></li>
+          <li><%= link_to 'Sign up', new_user_registration_path %></li>
+
         </ul>
       </div>
       <!-- /.navbar-collapse -->
@@ -51,7 +54,8 @@
   </nav>
 
   <header class="image-bg-fluid-height">
-    <img class="img-responsive img-center" src="img/scriptmtbold.png" alt="logo picojournal">
+    <%= image_tag("scriptmtbold.png", alt: "logo", class:"img-responsive img-center") %>
+
 
     <section class="jumbo-message">
       <div class="container">
@@ -80,7 +84,7 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-4">
-          <img class="img-promo" src="img/iPhone_Pico_example_1.jpg" alt="">
+          <%= image_tag("iPhone_Pico_example_1.jpg", class: "img-promo") %>
         </div>
         <div class="col-lg-8">
           <h1 class="section-heading">So, what exactly is this?</h1>
@@ -108,7 +112,7 @@
           <p class="lead section-lead"> <span class="glyphicon glyphicon-ok"></span>  Remember!</p>
         </div>
         <div class="col-lg-4">
-          <img class="img-promo" src="img/iPhone_Pico_example_2.jpg" alt="">
+            <%= image_tag("iPhone_Pico_example_2.jpg", alt: "iphone example", class:"img-promo") %>
         </div>
       </div>
       <!-- /.row -->
