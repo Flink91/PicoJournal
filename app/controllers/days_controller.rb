@@ -1,5 +1,6 @@
 class DaysController < ApplicationController
   before_action :set_day, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!
 
   # GET /days
   # GET /days.json
@@ -14,7 +15,7 @@ class DaysController < ApplicationController
 
   # GET /days/new
   def new
-    @day = Day.new
+    @day = current_user.days.build
   end
 
   # GET /days/1/edit
@@ -24,7 +25,7 @@ class DaysController < ApplicationController
   # POST /days
   # POST /days.json
   def create
-    @day = Day.new(day_params)
+    @day = current_user.days.build(day_params)
 
     respond_to do |format|
       if @day.save

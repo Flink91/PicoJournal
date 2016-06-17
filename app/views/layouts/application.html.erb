@@ -1,14 +1,36 @@
 <!DOCTYPE html>
 <html>
 <head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="Felix Gellner">
+
+  <%= javascript_include_tag 'application' %>
+  <%= csrf_meta_tag %>
+
   <title>PicoJournal</title>
-  <!--Hier kann man allgemeine scripte einbinden-->
+  <%= favicon_link_tag("favicon-16x16.png") %>
+
+  <!-- Bootstrap Core CSS -->
+  <%= stylesheet_link_tag("bootstrap.min.css") %>
+
+  <!-- fonts-->
+  <%= stylesheet_link_tag('application', 'http://fonts.googleapis.com/css?family=Nixie+One', media:'all', 'data-turbolinks-track' => true) %>
+  <%= stylesheet_link_tag('application', 'http://fonts.googleapis.com/css?family=Ledger', media:'all', 'data-turbolinks-track' => true) %>
+
+  <!-- Custom CSS -->
+  <%= stylesheet_link_tag("full-width-pics.css") %>
+  <!--compiled SASS-->
+  <%= stylesheet_link_tag("picojournal.css") %>
+
 </head>
+
 <body>
 
-
 <%= yield %>
-<p class="notice"><%= notice %></p>
-<p class="alert"><%= alert %></p>
+
 </body>
 </html>
