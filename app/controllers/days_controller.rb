@@ -8,6 +8,9 @@ class DaysController < ApplicationController
     @days = Day.all
   end
 
+  def home
+  end
+
   # GET /days/1
   # GET /days/1.json
   def show

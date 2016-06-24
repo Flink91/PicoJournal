@@ -1,0 +1,130 @@
+<!-- Navigation -->
+<nav class="navbar navbar-inverse navbar-top my-nav logged-in-nav" role="navigation">
+  <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand brand" href="index.html"><span class="pico">Pico</span><span class="journal">Journal</span></a>
+    </div>
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li>
+          <a class="active" href="home.html">Home</a>
+        </li>
+        <li>
+          <a href="days.html">Days</a>
+        </li>
+        <li>
+          <a href="stats.html">Stats</a>
+        </li>
+        <li>
+          <a href="about.html">About</a>
+        </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-user"></span> <%= current_user.email %></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Settings</a></li>
+            <li><a style="color: #ccc !important;" href="#">Go Premium</a></li>
+            <li><a href="#">Sign out</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <!-- /.navbar-collapse -->
+  </div>
+  <!-- /.container -->
+</nav>
+
+<!---site-wrap###############################-->
+<div class="site-wrap">
+
+  <!-- Content Section -->
+  <section class="home-top">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h2>Hi <%= current_user.email %>, welcome back!</h2>
+          <h3> You have missed <a href="#">?</a> day entries last week! Fill them in now.</h3>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Content Section -->
+  <section class="profile-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+        </div>
+        <div class="col-lg-12">
+          <%= image_tag("ich.jpg", class: "profile-img", alt: "profile picture", width:"200px", height:"200px") %>
+          <div class="user-desc">
+            <h3><%= current_user.email %><a href="#"><span style="font-size:15px; color: #ccc;" class="glyphicon glyphicon-cog"></span></a></h3>
+            <p>Here since: 01/01/01</p>
+            <p>314 entries</p>
+          </div>
+        </div>
+
+
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Content Section -->
+  <section class="single-day-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 text-center">
+          <h3>Have a look at this random day</h3>
+        </div>
+        <div class="container">
+          <div class="timeline-header">
+          </div>
+          <ul class="timeline">
+
+            <li class="timeline-sinlge">
+              <div class="timeline-badge">
+                <span class="timeline-balloon-date-day">27</span>
+                <span class="timeline-balloon-date-month">Dec</span>
+              </div>
+              <div class="timeline-panel">
+
+                <div class="timeline-body">
+                  <div class="timeline-left">
+                    <%= image_tag("tag.jpg", class: "day-img") %>
+                  </div>
+                  <div class="timeline-content">
+
+                    <p class="day-text">&quot;Today I first did something very stupid, but made the best of it. For lunch i ate something delicious, yum. Best thing was meeting s/o. 4321&quot;</p>
+                    <p class="day-short-rating"> 9 <span class="glyphicon glyphicon-star single-star"></span></p>
+
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <!--timeline end-->
+            <li>
+              <div class="timeline-end">
+                <span class=""></span>
+              </div>
+            </li>
+            <!--/timeline end-->
+
+          </ul>
+        </div>
+      </div>
+      <!-- /.row -->
+    </div>
+    <!-- /.container -->
+  </section>

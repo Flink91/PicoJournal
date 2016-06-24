@@ -199,6 +199,8 @@ footer {
 
 .active {
   border-bottom: 3px solid #492540; }
+  .active a {
+    background-color: #efefef; }
 
 .site-wrap {
   background-color: #efefef;
