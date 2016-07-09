@@ -79,4 +79,6 @@ Rails.application.configure do
 
   #added these myself
   config.serve_static_assets = true
+  #boese langsam
+  config.assets.compile = true
 end
