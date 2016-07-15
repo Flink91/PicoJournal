@@ -78,7 +78,7 @@ Rails.application.configure do
   config.active_record.dump_schema_after_migration = false
 
   #added these myself
-  config.serve_static_assets = true
+  config.serve_static_files = true
   #boese langsam
-  config.assets.compile = true
+  #config.assets.compile = true
 end
