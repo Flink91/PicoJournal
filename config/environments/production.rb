@@ -80,5 +80,8 @@ Rails.application.configure do
   #added these myself
   config.serve_static_files = true
   #boese langsam
+  config.cache_classes = true
+  config.assets.compile = true
+  config.assets.digest = true
   #config.assets.compile = true
 end
