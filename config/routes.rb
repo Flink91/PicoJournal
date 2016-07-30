@@ -5,6 +5,9 @@ Rails.application.routes.draw do
 
   root to: "welcome#index"
 
+
+  get '/stats' => 'pages#stats'
+  get '/about' => 'pages#about'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
