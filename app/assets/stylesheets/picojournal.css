@@ -1,3 +1,17 @@
+@font-face {
+  font-family: 'Ledger';
+  src: url('Ledger-Regular.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Nixie One';
+  src: url('NixieOne-Regular.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
 .seller-text {
   padding-bottom: 100px; }
 
