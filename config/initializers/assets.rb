@@ -13,3 +13,4 @@ Rails.application.config.assets.precompile += %w( frameworks/bootstrap.min.css )
 
 Rails.application.config.assets.precompile += %w( full-width-pics.css )
 Rails.application.config.assets.precompile += %w( picojournal.css )
+Rails.application.config.assets.precompile += %w( font-awesome.min.css )
