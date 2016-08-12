@@ -8,6 +8,7 @@ Rails.application.routes.draw do
 
   get '/stats' => 'pages#stats'
   get '/about' => 'pages#about'
+  get '/home' => 'pages#home'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
