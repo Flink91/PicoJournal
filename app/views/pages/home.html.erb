@@ -11,7 +11,7 @@
       <div class="container">
         <div class="row">
           <div class="col-md-12">
-            <h2>Hi <%= current_user.email %>, welcome back!</h2>
+            <h2>Hi <%= current_user.username %>, welcome back!</h2>
             <h3> You have missed <%= link_to 'some', new_day_path %> day entries last week! Fill them in now.</h3>
           </div>
 
@@ -28,7 +28,7 @@
           <div class="col-lg-12">
             <%= image_tag("ich.jpg", class: "profile-img", alt: "Profile picture", width:"200px", height:"200px") %>
             <div class="user-desc">
-              <h3><%= current_user.email %> <a href="#"><span style="font-size:15px; color: #ccc;" class="glyphicon glyphicon-cog"></span></a></h3>
+              <h3><%= current_user.username %> <a href="#"><span style="font-size:15px; color: #ccc;" class="glyphicon glyphicon-cog"></span></a></h3>
               <p>Here since: ??.??.20??</p>
               <p>??? entries</p>
             </div>
