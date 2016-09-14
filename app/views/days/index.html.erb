@@ -26,76 +26,64 @@
           </div>
           <ul class="timeline">
 
-            <li class="timeline-start">
-              <div class="timeline-badge">
-                <span class="timeline-balloon-date-day">29</span>
-                <span class="timeline-balloon-date-month">Dec</span>
-              </div>
-              <div class="timeline-panel">
+            <%
+            start_date = current_user.created_at.to_date
+            end_date = Date.today
+            end_date.downto(start_date).each do |date|
+            %>
 
-                <div class="timeline-body">
-                  <div class="timeline-left">
 
-                  <%= image_tag("tag.jpg", class: "day-img") %>
-                  </div>
-                  <div class="timeline-content timeline-form">
-                    <form class="new-day-form">
-                      <div class="day-text">
-                        <textarea style="resize:none;" class="form-control" id="exampleTextarea" rows="3" placeholder="What was the most interesting thing today?"></textarea>
 
-                        <div class="row" style="height:40px;">
-                          <div class="col-lg-4 pic-upload nopadding">
-                            <label class="file">
-                              <input type="file" id="file">
-                              <span class="file-custom"></span>
-                            </label>
+                    <%
+                      if(@days.exists? date: date)
+                        @days.where(date: date).each do |day|
+
+                      %>
+                    <li>
+                      <div class="timeline-badge">
+                        <span class="timeline-balloon-date-day" style="display:block;"><%= day.date.day %></span>
+                        <span class="timeline-balloon-date-month"><%= day.date.strftime("%b") %></span>
+                      </div>
+                      <div class="timeline-panel">
+
+                        <div class="timeline-body">
+                          <div class="timeline-left">
+                            <%= image_tag("tag.jpg", class: "day-img") %>
                           </div>
-                          <div class="col-lg-4 col-xs-12 nopadding">
-                            <p class="day-short-rating-input">Rate day:
-                              <select style="font-size: 0.8em;" id="exampleSelect1">
-                                <option>(0) terrible</option>
-                                <option>(1) bad</option>
-                                <option>(2) average</option>
-                                <option>(3) pretty good</option>
-                                <option>(4) great</option>
-                                <option>(5) the best</option>
-                              </select><span class="glyphicon glyphicon-star single-star"></span></p>
-                          </div>
-                        </div>
+                          <div class="timeline-content">
 
-                        <div class="form-group row">
-                          <div class="col-md-4 col-lg-4 col-sm-4 col-xs-12 nopadding">
-                                <%= link_to 'New Day', new_day_path %>
+                            <p class="day-text">&quot;<%= day.description %>&quot;</p>
+                            <p class="day-short-rating"> <%= day.rating %> <span class="glyphicon glyphicon-star single-star"></span><%= link_to 'Show', day %><%= link_to 'Edit', edit_day_path(day) %><%= link_to 'Destroy', day, method: :delete, data: { confirm: 'Are you sure?' } %></p>
+
                           </div>
                         </div>
                       </div>
-                    </form>
-                  </div>
-                </div>
-              </div>
-            </li>
+                    </li>
+                    <% end %>
+                    <% else %>
 
-            <% @days.reverse.each do |day| %>
-            <li>
-              <div class="timeline-badge">
-                <span class="timeline-balloon-date-day" style="display:block;"><%= day.date.day %></span>
-                <span class="timeline-balloon-date-month"><%= day.date.strftime("%b") %></span>
-              </div>
-              <div class="timeline-panel">
+                    <li>
+                      <div class="timeline-badge">
+                        <span class="timeline-balloon-date-day" style="display:block;"><%= date.strftime("%d") %></span>
+                        <span class="timeline-balloon-date-month"><%= date.strftime("%b") %></span>
+                      </div>
+                      <div class="timeline-panel">
 
-                <div class="timeline-body">
-                  <div class="timeline-left">
-                    <%= image_tag("tag.jpg", class: "day-img") %>
-                  </div>
-                  <div class="timeline-content">
+                        <div class="timeline-body">
+                          <div class="timeline-left">
+                          </div>
+                          <div class="timeline-content">
 
-                    <p class="day-text">&quot;<%= day.description %>&quot;</p>
-                    <p class="day-short-rating"> 4 <span class="glyphicon glyphicon-star single-star"></span><%= link_to 'Show', day %><%= link_to 'Edit', edit_day_path(day) %><%= link_to 'Destroy', day, method: :delete, data: { confirm: 'Are you sure?' } %></p>
+                            <p class="day-text"><%= link_to 'Add this day', new_day_path %></p>
+                            <p class="day-short-rating"></p>
 
-                  </div>
-                </div>
-              </div>
-            </li>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+
+                    <% end %>
+
             <% end %>
 
             <!--timeline end-->
