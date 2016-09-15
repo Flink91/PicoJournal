@@ -48,12 +48,13 @@
 
                         <div class="timeline-body">
                           <div class="timeline-left">
-                            <%= image_tag("tag.jpg", class: "day-img") %>
+                            <%= image_tag( day.image.url(:thumb), class: "day-img") %>
                           </div>
                           <div class="timeline-content">
 
                             <p class="day-text">&quot;<%= day.description %>&quot;</p>
-                            <p class="day-short-rating"> <%= day.rating %> <span class="glyphicon glyphicon-star single-star"></span><%= link_to 'Show', day %><%= link_to 'Edit', edit_day_path(day) %><%= link_to 'Destroy', day, method: :delete, data: { confirm: 'Are you sure?' } %></p>
+                            <p class="day-short-rating"> <%= day.rating %>
+                               <span class="glyphicon glyphicon-star single-star"></span><%= link_to 'Show', day %><%= link_to 'Edit', edit_day_path(day) %><%= link_to 'Destroy', day, method: :delete, data: { confirm: 'Are you sure?' } %></p>
 
                           </div>
                         </div>
