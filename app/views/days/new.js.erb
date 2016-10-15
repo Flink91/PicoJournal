@@ -1,0 +1,3 @@
+
+//$('#new_day_ajax').hide().after('<%= j render("form")%>');
+$('#new_day_ajax_<%= params[:date] %>').hide().after('<%= j render("form")%>');

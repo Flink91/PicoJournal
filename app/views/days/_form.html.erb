@@ -1,4 +1,4 @@
-<%= form_for @day, html: {multipart: true} do |f| %>
+<%= form_for @day, html: {multipart: true}, remote: true do |f| %>
   <% if @day.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@day.errors.count, "error") %> prohibited this day from being saved:</h2>
@@ -11,7 +11,7 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="field" style="float:left;">
     <%= f.label :date %><br>
     <%= f.date_select :date %>
   </div>
@@ -23,7 +23,7 @@
     <%= f.label :image %><br>
     <%= f.file_field :image %>
   </div>
-  <div class="field">
+  <div class="field" style="float:right;">
     <%= f.label :rating %><br>
     <%= f.number_field :rating, min:1, max:10 %>
   </div>

@@ -1,0 +1,19 @@
+<div class="timeline-badge">
+  <span class="timeline-balloon-date-day" style="display:block;"><%= day.date.day %></span>
+  <span class="timeline-balloon-date-month"><%= day.date.strftime("%b") %></span>
+</div>
+<div class="timeline-panel">
+
+  <div class="timeline-body">
+    <div class="timeline-left">
+      <%= image_tag( day.image.url(:thumb), class: "day-img") %>
+    </div>
+    <div class="timeline-content">
+
+      <p class="day-text">&quot;<%= day.description %>&quot;</p>
+      <p class="day-short-rating"> <%= day.rating %>
+         <span class="glyphicon glyphicon-star single-star"></span><%= link_to 'Show', day %><%= link_to 'Edit', edit_day_path(day) %><%= link_to 'Destroy', day, method: :delete, data: { confirm: 'Are you sure?' } %></p>
+
+    </div>
+  </div>
+</div>

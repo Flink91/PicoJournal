@@ -39,7 +39,7 @@
                         @days.where(date: date).each do |day|
 
                       %>
-                    <li>
+                    <li id="li_<%= date.strftime('%Y-%m-%d') %>">
                       <div class="timeline-badge">
                         <span class="timeline-balloon-date-day" style="display:block;"><%= day.date.day %></span>
                         <span class="timeline-balloon-date-month"><%= day.date.strftime("%b") %></span>
@@ -63,7 +63,7 @@
                     <% end %>
                     <% else %>
 
-                    <li>
+                    <li id="li_<%= date.strftime('%Y-%m-%d') %>">
                       <div class="timeline-badge">
                         <span class="timeline-balloon-date-day" style="display:block;"><%= date.strftime("%d") %></span>
                         <span class="timeline-balloon-date-month"><%= date.strftime("%b") %></span>
@@ -75,7 +75,9 @@
                           </div>
                           <div class="timeline-content">
 
-                            <p class="day-text"><%= link_to 'Add this day', new_day_path %></p>
+                            <!--<p class="day-text"><%= link_to 'Add this day', new_day_path %></p>-->
+                            <a href="/days/new?date=<%= date.strftime('%Y-%m-%d') %>" data-remote="true" id="new_day_ajax_<%= date.strftime('%Y-%m-%d') %>"><p class="day-text">Add This day</p></a>
+
                             <p class="day-short-rating"></p>
 
                           </div>
