@@ -1,4 +1,4 @@
-<div class="timeline-badge">
+<div class="timeline-badge" id="inner_<%= day.date %>">
   <span class="timeline-balloon-date-day" style="display:block;"><%= day.date.day %></span>
   <span class="timeline-balloon-date-month"><%= day.date.strftime("%b") %></span>
 </div>
@@ -12,7 +12,7 @@
 
       <p class="day-text">&quot;<%= day.description %>&quot;</p>
       <p class="day-short-rating"> <%= day.rating %>
-         <span class="glyphicon glyphicon-star single-star"></span><%= link_to 'Show', day %><%= link_to 'Edit', edit_day_path(day) %><%= link_to 'Destroy', day, method: :delete, data: { confirm: 'Are you sure?' } %></p>
+         <span class="glyphicon glyphicon-star single-star"></span><%= link_to 'Edit', edit_day_path(day) %><%= link_to 'Destroy', day, method: :delete, data: { confirm: 'Are you sure?' } %></p>
 
     </div>
   </div>

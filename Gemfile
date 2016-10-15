@@ -39,8 +39,9 @@ gem 'devise', '~> 3.5', '>= 3.5.6'
 
 gem 'paperclip', '~> 5.1'
 
-gem "refile", require: "refile/rails"
-gem "refile-mini_magick"
+gem 'remotipart', '~> 1.2'
+#gem "refile", require: "refile/rails"
+#gem "refile-mini_magick"
 
 gem 'will_paginate', '~> 3.1.0'
 

@@ -1,1 +1,5 @@
-$('#new_day').closest( 'li' ).remove();
+//das klappt
+var tmp = $('#inner_<%= @day.date %>').closest('li');
+$(tmp).slideUp();
+//
+//$(tmp).html(' j (render partial: "days/dayempty", locals: {date: date}) %>').hide().fadeIn();

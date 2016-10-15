@@ -1,4 +1,3 @@
-var a = $('#new_day').closest( 'li' );
+var temp = $('#new_day').closest( 'li' );
 $('#new_day').remove();
-//alert("<%= j render (@day) %>");
-$(a).html('<%= j render(@day) %>');
+$(temp).html('<%= j render(@day) %>').hide().fadeIn();

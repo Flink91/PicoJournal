@@ -1,0 +1,3 @@
+var a = $('#edit_day_ajax_<%= @day.id %>').closest( 'li' );
+
+$(a).html('<%= j render("form") %>').hide().fadeIn();
